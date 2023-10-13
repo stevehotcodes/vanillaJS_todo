@@ -1,0 +1,181 @@
+:root{
+    --dark:#223132;
+    --darker:#123;
+    --darkest:#010134;
+    --gray:#252525;
+    --pink:#b5347b;
+    --purple:#3f2a79;
+    --light:#eee;
+}
+
+*{
+    font-family:Verdana, "Roboto", Tahoma, sans-serif;
+    margin:0 auto;
+    box-sizing:border-box;
+    /* border:2px solid red; */
+}
+
+body{
+    background-color:var(--eee)
+}
+
+header{
+    max-width:800px;
+    width:100%;
+    /* border:1px solid white; */
+    display:flex;
+    justify-content:center;
+    /* align-items:center; */
+    flex-direction:column;
+    padding:1rem 2rem;
+    
+}
+
+header h1{
+    font-size:1.5rem;
+    font-weight:700;
+    color:var(--gray);
+    margin-bottom:1rem;
+}
+
+input,button{
+    appearance:none;
+    background:none;
+    outline:none;
+    border:none;
+}
+
+#new-task-form{
+    display:flex;
+    /* border:2px solid red; */
+    /* width:100%; */
+    /* max-width:800px; */
+    flex:1 1 0;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin:1rem;
+}
+
+#new-task-input{
+    background-color:var(--darker);
+    padding:1rem 1rem;
+    /* display: block; */
+    border-radius: 8px;
+    /* width: 0%; */
+    flex:.7 .7 0;
+    color:white;
+    font-size:1.25rem;
+    /* margin-right:1rem; */
+}
+
+#new-task-input::placeholder{
+    color:gray;
+    font-size:.67rem;
+    
+}
+
+#new-task-form #task-submit{
+    background-image:linear-gradient(to top ,var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-size: 1rem;
+    font-weight:700;
+    transition:0.5s;
+    cursor: pointer;
+    flex:.3 .3 0;
+    padding:0;
+
+}
+
+#task-submit :hover{
+    opacity:0.8;
+}
+
+#task-submit:active{
+    opacity:0.6;
+}
+
+main{
+    height:100vh;
+    width:100%;
+    max-width:800px;
+}
+.task-list h2{
+    font-size:1.5rem;
+    text-align:center;
+    font-weight:700;
+    color:#fff;
+}
+
+.tasks{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-content:center;
+}
+
+.task{
+    display:flex;
+    background-color:var(--gray);
+    margin:.5rem 1rem;
+    border-radius: 1rem;
+       
+    
+}
+
+.task-content{
+    /* background-color:var(--darker); */
+   
+    padding:1rem 2rem;
+    border-radius:.7rem;
+    flex:1 1 0%;
+    font-size: 1.125rem;
+    color:var(--light);
+   
+    width: 100%;
+    display:block;
+    transition:0.4s;
+
+}
+
+.task-content:not(:read-only){
+    color:var(--pink)
+}
+
+
+.task-actions{
+    display:flex;
+    justify-content: center;
+    
+}
+
+.edit-btn{
+    color:green;
+    padding:1rem;
+    font-size:1rem;
+    font-weight:700;
+    transition:0.5s;
+    cursor:pointer;
+}
+
+.delete-btn{
+    color:red;
+    padding:1rem;
+    font-size:1rem;
+    font-weight:700;
+    transition:0.5s;
+    cursor:pointer;
+}
+
+.delete-btn:hover,.edit-btn:hover{
+    opacity:0.8;
+}
+
+.delete-btn:active,.edit-btn:active{
+    opacity:0.4;
+}
+
+
+
+
+
