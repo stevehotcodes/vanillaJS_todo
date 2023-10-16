@@ -9,7 +9,7 @@ window.addEventListener('load',()=>{
         e.preventDefault()
         e.stopPropagation();
 
-        const task=input.value;
+        const task=input.value; 
     
 
         if(!task){
@@ -89,7 +89,7 @@ window.addEventListener('load',()=>{
         })
 
         delete_btn.addEventListener('click',()=>{
-            // list_el.removeChild(task_el)
+            list_el.removeChild(task_el)
         console.log(task_content_el);
         })   
 
