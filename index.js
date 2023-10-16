@@ -36,19 +36,22 @@ window.addEventListener('load',()=>{
         const task_content_el=document.createElement("input");
         task_content_el.type="text"
         task_content_el.value=task
-
-        let taskArray=JSON.parse(localStorage.getItem('tasks')) || [];
+        localStorage.setItem('tasks',task);
+        let storedTaskValue=localStorage.getItem('task')
         
-        let savingTask=()=>{
-            let taskTitle=task_content_el.value;
+        // let taskArray=JSON.parse(localStorage.getItem('tasks')) || [];
+        
+        // let savingTask=()=>{
+        //     let taskTitle=task_content_el.value;
 
-            let task={
-                task:taskTitle
-            }
-            taskArray.push(task)
-            localStorage.setItem('taskArray',JSON.stringify(taskArray));
-        }
-        savingTask ();
+        //     let task={
+        //         task:taskTitle
+        //     }
+        //     taskArray.push(task)
+        //     for(let i=0;i<ltaskArray.length;i++)
+        //     localStorage.setItem('taskArray',JSON.stringify(taskArray));
+        // }
+        // savingTask ();
         
         task_content_el.setAttribute('readonly','readonly');
         task_content_el.classList.add("task-content")
@@ -100,7 +103,7 @@ window.addEventListener('load',()=>{
         delete_btn.addEventListener('click',()=>{
             // list_el.removeChild(task_el)
 
-            task_content_el.style.backgroundColor="red";
+            task_el.style.backgroundColor="red";
             task_content_el.style.textDecoration="line-through"
             delete_btn.innerHTML=""
             edit_btn.style.display="none"
